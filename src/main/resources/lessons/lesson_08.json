@@ -1,0 +1,100 @@
+{
+  "lessonId": "lesson_08",
+  "title": "Ondalıklı Sayılar (Double)",
+  "objectives": [
+    "double veri tipini ve ondalıklı sayıları anlamak",
+    "Ondalıklı sayılarla matematik işlemleri (çarpma, toplama) yapmak",
+    "Java'da matematiksel operatör önceliğini gözlemlemek"
+  ],
+  "concepts": [
+    "double",
+    "floating point",
+    "arithmetic operations",
+    "precision"
+  ],
+  "defaultMessage": "Market sepeti hesaplanıyor. Ondalıklı sayıların bellekte nasıl saklandığını ve toplandığını izleyin.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "title": "Double Değişkeni: Ekmek",
+      "icon": "🍞",
+      "content": "'double' tipi ondalıklı sayıları saklamak için kullanılır. Burada ekmek fiyatı olan 5.5 değeri belleğe kaydediliyor.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 4,
+          "astNodeType": "VariableDeclarator",
+          "eventType": "TANIMLAMA"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Double Değişkeni: Su",
+      "icon": "💧",
+      "content": "İkinci bir ondalıklı sayı değişkeni olan 'su' tanımlanıyor. Double tipi, float tipine göre daha yüksek hassasiyet sağlar.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 5,
+          "astNodeType": "VariableDeclarator",
+          "eventType": "TANIMLAMA"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Çarpma İşlemi: Çikolata",
+      "icon": "🍫",
+      "content": "Burada bir hesaplama yapılıyor: 3.0 * 2.0. Java önce çarpmayı yapar, ardından sonucu (6.0) 'cikolata' değişkenine atar.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 6,
+          "astNodeType": "VariableDeclarator",
+          "eventType": "TANIMLAMA"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Toplam Tutar",
+      "icon": "💰",
+      "content": "Tüm ondalıklı değerler toplanıyor. Java, bu sayıları toplarken ondalık basamakları korur. Sonuç 'toplam' değişkenine aktarılır.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 7,
+          "astNodeType": "VariableDeclarator",
+          "eventType": "TANIMLAMA"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Ödeme Çıktısı",
+      "icon": "🖨️",
+      "content": "Hesaplanan toplam tutar (13.75), bir metin ile birleştirilerek konsola yazdırılıyor.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 8,
+          "astNodeType": "MethodCallExpr",
+          "eventType": "METOT ÇAĞRISI"
+        }
+      ]
+    },
+    {
+      "type": "warning",
+      "title": "Dikkat: Hassasiyet",
+      "icon": "⚠️",
+      "content": "Double tipi çok hassastır ancak finansal uygulamalarda kuruş farkları oluşmaması için bazen 'BigDecimal' sınıfı tercih edilir.",
+      "priority": 3,
+      "triggers": [
+        {
+          "astNodeType": "VariableDeclarator"
+        }
+      ]
+    }
+  ]
+}

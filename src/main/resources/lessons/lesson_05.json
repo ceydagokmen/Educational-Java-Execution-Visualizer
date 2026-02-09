@@ -1,0 +1,86 @@
+{
+  "lessonId": "lesson_05",
+  "title": "Mantıksal İşlemler (Boolean)",
+  "objectives": [
+    "boolean veri tipini ve mantığını anlamak",
+    "Koşul değişkenlerinin if-else üzerindeki etkisini görmek",
+    "Bir değişkenin değerinin zamanla nasıl güncellendiğini takip etmek"
+  ],
+  "concepts": [
+    "boolean",
+    "true/false",
+    "conditional logic",
+    "assignment"
+  ],
+  "defaultMessage": "Lamba durumunu simüle ediyoruz. Değişkenin true veya false olmasına göre akışın nasıl değiştiğini izleyin.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "title": "Boolean Değişkeni Tanımlama",
+      "icon": "💡",
+      "content": "'boolean' tipi sadece iki değer alabilir: true (doğru) veya false (yanlış). Burada 'lambaAcik' değişkenine başlangıçta 'true' değeri veriliyor.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 4,
+          "astNodeType": "VariableDeclarator",
+          "eventType": "TANIMLAMA"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "İlk Karar Noktası",
+      "icon": "❓",
+      "content": "Program 'lambaAcik' değişkeninin değerine bakıyor. Değer şu an 'true' olduğu için if bloğunun içine girecek ve ışıkların yandığını yazdıracak.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 5,
+          "astNodeType": "IfStmt",
+          "eventType": "❓ KARAR KONTROLÜ: lambaAcik"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Değişkeni Güncelleme",
+      "icon": "🔄",
+      "content": "Burada 'lambaAcik' değişkeninin değeri 'false' olarak güncelleniyor. Artık bellek (Stack) kısmında bu değişkenin karşısında 'false' yazdığını göreceksiniz.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 10,
+          "astNodeType": "AssignExpr",
+          "eventType": "ATAMA/GÜNCELLEME"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "İkinci Karar Noktası",
+      "icon": "❓",
+      "content": "Değişken güncellendiği için bu sefer koşul 'false' dönecek. Program 'if' bloğunu atlayıp doğrudan 'else' bloğuna geçiş yapacak.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 11,
+          "astNodeType": "IfStmt",
+          "eventType": "❓ KARAR KONTROLÜ: lambaAcik"
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Boolean Mantığı",
+      "icon": "📚",
+      "content": "Java'da if ifadeleri her zaman bir boolean sonuç bekler. Değişkenin kendisi zaten boolean olduğu için ek bir karşılaştırma (== true gibi) yapmamıza gerek kalmaz.",
+      "priority": 5,
+      "triggers": [
+        {
+          "astNodeType": "IfStmt"
+        }
+      ]
+    }
+  ]
+}

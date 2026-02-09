@@ -1,0 +1,74 @@
+{
+  "lessonId": "lesson_02",
+  "title": "Basit Matematik",
+  "objectives": [
+    "Birden fazla değişken tanımlamayı öğrenmek",
+    "Değişkenler arası toplama işlemi yapmayı kavramak",
+    "Matematiksel sonuçları metinlerle birleştirerek yazdırmak"
+  ],
+  "concepts": [
+    "multiple variables",
+    "arithmetic operations",
+    "addition",
+    "variable initialization"
+  ],
+  "defaultMessage": "Matematiksel işlemler yapılıyor. Bellekteki (Stack) değerlerin nasıl toplandığını izleyin.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "title": "İlk Değişken: Elma",
+      "icon": "🍎",
+      "content": "'elma' adında bir tam sayı değişkeni oluşturuluyor ve 10 değeri atanıyor. Bellekte bu isimle bir alan ayrıldı.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 4,
+          "astNodeType": "VariableDeclarator",
+          "eventType": "TANIMLAMA"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "İkinci Değişken: Armut",
+      "icon": "🍐",
+      "content": "'armut' adında ikinci bir değişken tanımlanıyor ve 20 değeri atanıyor. Artık elimizde işlem yapabileceğimiz iki farklı veri var.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 5,
+          "astNodeType": "VariableDeclarator",
+          "eventType": "TANIMLAMA"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Toplama İşlemi",
+      "icon": "➕",
+      "content": "'toplam' değişkeni oluşturulurken 'elma' ve 'armut' değişkenlerinin içindeki değerler (10 + 20) toplanıyor. Sonuç olan 30 değeri 'toplam' değişkenine aktarılıyor.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 6,
+          "astNodeType": "VariableDeclarator",
+          "eventType": "TANIMLAMA"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Sonucu Yazdırma",
+      "icon": "🖨️",
+      "content": "Hesaplanan 'toplam' değeri, açıklayıcı bir metinle birleştirilerek konsola yazdırılıyor.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 7,
+          "astNodeType": "MethodCallExpr",
+          "eventType": "METOT ÇAĞRISI"
+        }
+      ]
+    }
+  ]
+}

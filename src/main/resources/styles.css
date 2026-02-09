@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Görsel Sabitleme ve Temizlik
+   ========================================================================== */
+.root {
+    -fx-base: #0B0E14;
+    -fx-background: #0B0E14;
+    -fx-control-inner-background: #1A1C2E;
+    -fx-bg-main: #0B0E14;
+    -fx-card-bg: #1A1C2E;
+    -fx-primary-accent: #00F5FF;
+    -fx-text-primary: #F8F9FA;
+}
+
+/* Tablo Okunabilirliği */
+.table-view {
+    -fx-background-color: transparent !important;
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-radius: 8px;
+}
+.table-view .column-header { -fx-background-color: transparent; -fx-text-fill: #00F5FF; -fx-font-weight: bold; }
+.table-row-cell { -fx-background-color: transparent; -fx-text-fill: white; }
+.table-row-cell:filled:selected { -fx-background-color: rgba(0, 245, 255, 0.1); }
+
+/* SplitPane Ayarları (Şeffaf ve Modern) */
+.split-pane { -fx-background-color: transparent; }
+.split-pane-divider {
+    -fx-background-color: #0B0E14;
+    -fx-border-color: transparent rgba(255, 255, 255, 0.05);
+}
+
+/* Senaryo Listesi ve Editör */
+.scenario-list {
+    -fx-background-color: #12161F !important;
+    -fx-background-radius: 12px;
+}
+.code-area {
+    -fx-font-family: 'JetBrains Mono', monospace;
+    -fx-control-inner-background: #1A1C2E !important;
+    -fx-text-fill: #00F5FF !important;
+}
+.scroll-bar .thumb { -fx-background-color: #2D3748; -fx-background-radius: 10; }

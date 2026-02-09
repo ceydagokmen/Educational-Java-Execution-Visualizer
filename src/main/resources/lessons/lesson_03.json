@@ -1,0 +1,43 @@
+{
+  "lessonId": "lesson_03",
+  "title": "Metin İşlemleri (Referans)",
+  "objectives": [
+    "String veri tipini anlamak",
+    "Heap bellekte nesne oluşumunu görmek",
+    "Metin birleştirme (+) operatörünü öğrenmek"
+  ],
+  "concepts": ["String", "Reference Types", "Heap Memory", "Concatenation"],
+  "defaultMessage": "Kod çalışıyor, metinlerin bellekteki değişimini takip edin.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "title": "String Tanımlama",
+      "icon": "📝",
+      "content": "'String' bir referans tipidir. Bu satır çalıştığında 'ad' değişkeni Stack'te tutulur ancak asıl metin Heap bellekte bir nesne olarak saklanır.",
+      "priority": 10,
+      "triggers": [
+        { "lineNumber": 4, "astNodeType": "VariableDeclarator", "eventType": "TANIMLAMA" }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Referans Tipler ve Heap",
+      "icon": "📚",
+      "content": "Primitif tiplerin (int gibi) aksine, Stringler nesnedir. Stack'teki değişken, Heap'teki o metnin adresini (0x...) gösterir.",
+      "priority": 5,
+      "triggers": [
+        { "astNodeType": "VariableDeclarator" }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Metin Birleştirme",
+      "icon": "➕",
+      "content": "Java'da '+' operatörü iki String arasında kullanıldığında onları uç uca ekler. Burada 'ad', boşluk ve 'soyad' birleşerek yeni bir metin oluşturur.",
+      "priority": 10,
+      "triggers": [
+        { "lineNumber": 6, "astNodeType": "VariableDeclarator", "eventType": "TANIMLAMA" }
+      ]
+    }
+  ]
+}

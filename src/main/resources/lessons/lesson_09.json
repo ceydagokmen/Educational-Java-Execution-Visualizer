@@ -1,0 +1,72 @@
+{
+  "lessonId": "lesson_09",
+  "title": "Metot Kullanımı",
+  "objectives": [
+    "Metot tanımlamayı ve çağırmayı öğrenmek",
+    "Metotlar arası parametre (veri) aktarımını anlamak",
+    "Kodun akışının farklı metotlara nasıl dallandığını görmek"
+  ],
+  "concepts": [
+    "method call",
+    "parameters",
+    "program flow",
+    "reusability"
+  ],
+  "defaultMessage": "Metotlar arası geçiş yapılıyor. Verinin bir metottan diğerine nasıl taşındığını izleyin.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "title": "Değişken Hazırlığı",
+      "icon": "📝",
+      "content": "'Ayşe' metni 'isim' değişkenine atanıyor. Bu değişken birazdan başka bir metoda misafir olarak gönderilecek.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 4,
+          "astNodeType": "VariableDeclarator",
+          "eventType": "TANIMLAMA"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Metot Çağrısı (Zıplama)",
+      "icon": "🚀",
+      "content": "Burada 'selamVer' metodu çağrılıyor. Programın akışı şu anki satırdan ayrılıp, aşağıda tanımlanan 'selamVer' metodunun içine zıplayacak.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 5,
+          "astNodeType": "MethodCallExpr",
+          "eventType": "METOT ÇAĞRISI"
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Parametre Aktarımı",
+      "icon": "📫",
+      "content": "'isim' değişkeninin içindeki değer, 'selamVer' metodundaki 'kime' parametresine kopyalanır. Artık metodun içinde bu ismi 'kime' adıyla kullanacağız.",
+      "priority": 5,
+      "triggers": [
+        {
+          "astNodeType": "MethodCallExpr"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Metot İçindeki İşlem",
+      "icon": "💬",
+      "content": "Metot kendisine gelen 'kime' bilgisini alıp 'Merhaba' metniyle birleştirerek konsola yazdırıyor.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 8,
+          "astNodeType": "MethodCallExpr",
+          "eventType": "METOT ÇAĞRISI"
+        }
+      ]
+    }
+  ]
+}

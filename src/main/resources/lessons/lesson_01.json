@@ -1,0 +1,59 @@
+{
+  "lessonId": "lesson_01",
+  "title": "Merhaba Dünya",
+  "objectives": [
+    "Java programlama diline giriş yapmak",
+    "Tam sayı (int) değişkeni tanımlamayı öğrenmek",
+    "Metin ve değişkenleri birleştirerek çıktı almayı kavramak"
+  ],
+  "concepts": [
+    "variables",
+    "data types",
+    "int",
+    "output",
+    "concatenation"
+  ],
+  "defaultMessage": "Java dünyasına hoş geldiniz! Kodun adım adım nasıl işlendiğini ve bellekteki değişimi izleyin.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "title": "Değişken Tanımlama",
+      "icon": "🔢",
+      "content": "Burada 'yas' adında, tam sayı (int) tipinde bir değişken oluşturuluyor ve içine 25 değeri yükleniyor. Bu değer bilgisayarın Stack belleğinde saklanır.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 5,
+          "astNodeType": "VariableDeclarator",
+          "eventType": "TANIMLAMA"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Konsola Yazdırma",
+      "icon": "🖨️",
+      "content": "System.out.println komutu kullanılırken, tırnak içindeki metin ile 'yas' değişkeni '+' operatörü sayesinde birleştirilir. Sonuç konsol ekranına tek bir cümle olarak yansır.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 6,
+          "astNodeType": "MethodCallExpr",
+          "eventType": "METOT ÇAĞRISI"
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Değişken Mantığı",
+      "icon": "📚",
+      "content": "Değişkenler, program içinde verileri saklamamıza yarayan kutucuklar gibidir. 'int' tipi sadece tam sayıları saklamak için kullanılır.",
+      "priority": 5,
+      "triggers": [
+        {
+          "astNodeType": "VariableDeclarator"
+        }
+      ]
+    }
+  ]
+}

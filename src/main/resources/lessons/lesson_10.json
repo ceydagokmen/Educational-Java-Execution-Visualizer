@@ -1,0 +1,73 @@
+{
+  "lessonId": "lesson_10",
+  "title": "Sınıf ve Nesne",
+  "objectives": [
+    "Sınıf (Class) ve Nesne (Object) arasındaki farkı anlamak",
+    "'new' anahtar kelimesinin işlevini kavramak",
+    "Nesnelerin Heap bellekte nasıl oluşturulduğunu görmek"
+  ],
+  "concepts": [
+    "class",
+    "object",
+    "instantiation",
+    "heap memory",
+    "reference"
+  ],
+  "defaultMessage": "Bir nesne üretiliyor. Bellekteki (Heap) yeni oluşumu ve referans bağlantısını izleyin.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "title": "Nesne Oluşturma (Instantiation)",
+      "icon": "🏗️",
+      "content": "'new Araba()' komutu, Araba sınıfından yeni bir kopya (nesne) üretir. Bu nesne bellek üzerindeki Heap alanına yerleştirilir.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 4,
+          "astNodeType": "VariableDeclarator",
+          "eventType": "TANIMLAMA"
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Sınıf vs Nesne",
+      "icon": "📐",
+      "content": "Sınıf (Araba) bir taslaktır, nesne (a1) ise o taslaktan üretilmiş gerçek bir varlıktır. Bir taslaktan binlerce farklı nesne üretebilirsiniz.",
+      "priority": 5,
+      "triggers": [
+        {
+          "astNodeType": "VariableDeclarator"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Referans Bağlantısı",
+      "icon": "🔗",
+      "content": "Stack bellekteki 'a1' değişkeni, Heap bellekte oluşturulan Araba nesnesinin adresini (örneğin 0x63F) tutar. Artık 'a1' üzerinden arabaya erişebiliriz.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 4,
+          "astNodeType": "VariableDeclarator",
+          "eventType": "TANIMLAMA"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Üretim Tamamlandı",
+      "icon": "✅",
+      "content": "Nesne başarıyla belleğe yerleşti ve referansı atandı. Şimdi bu nesnenin özelliklerine (renk gibi) erişmeye hazırız.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 5,
+          "astNodeType": "MethodCallExpr",
+          "eventType": "METOT ÇAĞRISI"
+        }
+      ]
+    }
+  ]
+}

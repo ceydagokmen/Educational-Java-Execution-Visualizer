@@ -1,0 +1,78 @@
+{
+  "lessonId": "lesson_06",
+  "title": "For Döngüsü (Sayma)",
+  "objectives": [
+    "For döngüsünün yapısını (başlangıç, koşul, artış) anlamak",
+    "Döngü değişkeninin (i) her adımda nasıl değiştiğini gözlemlemek",
+    "Tekrar eden işlemlerin nasıl otomatikleştirildiğini görmek"
+  ],
+  "concepts": [
+    "for loop",
+    "iteration",
+    "counter variable",
+    "loop condition"
+  ],
+  "defaultMessage": "Döngü başlıyor. Sayacın her adımda nasıl arttığını ve kodun nasıl başa döndüğünü takip edin.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "title": "Döngü Başlangıcı (Initialization)",
+      "icon": "🚀",
+      "content": "For döngüsü başlıyor. 'int i = 1' ifadesiyle döngü sayacımız oluşturuluyor ve 1 değerinden başlıyor. Bu işlem sadece bir kez, döngü başlarken yapılır.",
+      "priority": 10,
+      "triggers": [
+        {
+          "astNodeType": "VariableDeclarator",
+          "eventType": "🔄 DÖNGÜ BAŞLANGICI"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Döngü Gövdesi ve Çıktı",
+      "icon": "🖨️",
+      "content": "Döngü koşulu (i <= 3) doğru olduğu sürece bu blok çalışır. Şu an 'i' değişkeninin güncel değeri konsola yazdırılıyor.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 6,
+          "astNodeType": "MethodCallExpr",
+          "eventType": "METOT ÇAĞRISI"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Sayacı Artırma (Update)",
+      "icon": "➕",
+      "content": "Bloğun sonuna gelindiğinde 'i++' işlemi yapılır. 'i' değişkeni 1 artırılır ve ardından koşul (i <= 3) tekrar kontrol edilir. Eğer koşul hala doğruysa döngü bir kez daha döner.",
+      "priority": 10,
+      "triggers": [
+        {
+          "astNodeType": "UnaryExpr",
+          "eventType": "🔄 DÖNGÜ GÜNCELLEME (Tur 1)"
+        },
+        {
+          "astNodeType": "UnaryExpr",
+          "eventType": "🔄 DÖNGÜ GÜNCELLEME (Tur 2)"
+        },
+        {
+          "astNodeType": "UnaryExpr",
+          "eventType": "🔄 DÖNGÜ GÜNCELLEME (Tur 3)"
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Döngü Mantığı",
+      "icon": "📚",
+      "content": "For döngüsü; başlangıç, bitiş koşulu ve artış miktarını tek satırda tanımlamanıza olanak sağlar. Koşul 'false' (yanlış) olduğu anda program döngüden çıkar ve alt satıra geçer.",
+      "priority": 5,
+      "triggers": [
+        {
+          "astNodeType": "ForStmt"
+        }
+      ]
+    }
+  ]
+}

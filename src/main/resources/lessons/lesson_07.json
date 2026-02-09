@@ -1,0 +1,85 @@
+{
+  "lessonId": "lesson_07",
+  "title": "Döngü ile Toplama (Biriktirme)",
+  "objectives": [
+    "Döngü içerisinde bir değişkenin değerini güncellemeyi öğrenmek",
+    "Kümülatif toplam (biriktirme) mantığını kavramak",
+    "Döngü değişkeni ile diğer değişkenler arasındaki ilişkiyi görmek"
+  ],
+  "concepts": [
+    "for loop",
+    "accumulation",
+    "assignment operator",
+    "variable update"
+  ],
+  "defaultMessage": "Kasa hesaplanıyor. Her gün eklenen paranın toplamı nasıl değiştirdiğini izleyin.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "title": "Başlangıç Değeri",
+      "icon": "💰",
+      "content": "'kasa' adında bir değişken oluşturuluyor ve 0 değeri atanıyor. Bu değişken, döngü boyunca birikecek olan toplam tutarı tutacak.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 4,
+          "astNodeType": "VariableDeclarator",
+          "eventType": "TANIMLAMA"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Döngü ve Gün Sayacı",
+      "icon": "📅",
+      "content": "Döngü 'gun' değişkeni ile 1'den başlıyor. Her dönüş bir günü temsil ediyor ve 3. güne kadar devam edecek.",
+      "priority": 10,
+      "triggers": [
+        {
+          "astNodeType": "VariableDeclarator",
+          "eventType": "🔄 DÖNGÜ BAŞLANGICI"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Biriktirme İşlemi",
+      "icon": "➕",
+      "content": "'kasa = kasa + 10' satırı çok kritiktir. Mevcut kasa değerine 10 eklenir ve yeni toplam tekrar kasaya yazılır. Bellekteki (RAM) değerin her adımda 10, 20, 30 şeklinde arttığını görebilirsiniz.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 6,
+          "astNodeType": "AssignExpr",
+          "eventType": "ATAMA/GÜNCELLEME"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Günlük Rapor",
+      "icon": "📊",
+      "content": "System.out.println ile o anki gün ve kasadaki toplam miktar konsola yazdırılıyor.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 7,
+          "astNodeType": "MethodCallExpr",
+          "eventType": "METOT ÇAĞRISI"
+        }
+      ]
+    },
+    {
+      "type": "reallife",
+      "title": "Gerçek Hayatta Biriktirme",
+      "icon": "🌍",
+      "content": "Bu mantık gerçek hayatta; alışveriş sepeti toplamı, oyunlardaki skor tabloları veya sensörlerden gelen verilerin ortalamasını alırken sıkça kullanılır.",
+      "priority": 3,
+      "triggers": [
+        {
+          "astNodeType": "AssignExpr"
+        }
+      ]
+    }
+  ]
+}

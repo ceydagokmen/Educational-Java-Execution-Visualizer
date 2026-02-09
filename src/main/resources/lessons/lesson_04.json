@@ -1,0 +1,84 @@
+{
+  "lessonId": "lesson_04",
+  "title": "Karar Yapıları (If-Else)",
+  "objectives": [
+    "Mantıksal karşılaştırma operatörlerini anlamak",
+    "if-else yapısı ile program akışını kontrol etmek",
+    "Koşulun sonucuna göre hangi kod bloğunun çalışacağını görmek"
+  ],
+  "concepts": [
+    "if-else",
+    "boolean expressions",
+    "comparison operators",
+    "control flow"
+  ],
+  "defaultMessage": "Program bir karar noktasında. Koşulun sonucuna göre kodun hangi yöne gideceğini takip edin.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "title": "Değişken Tanımlama",
+      "icon": "🔢",
+      "content": "'notum' adında bir tam sayı değişkeni oluşturuluyor ve 45 değeri atanıyor. Bu değer, birazdan baraj puanı ile karşılaştırılacak.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 4,
+          "astNodeType": "VariableDeclarator",
+          "eventType": "TANIMLAMA"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Karar Noktası (if)",
+      "icon": "❓",
+      "content": "Burada bir karşılaştırma yapılıyor: 'notum > baraj'. Java bu ifadenin sonucunu 'true' (doğru) veya 'false' (yanlış) olarak hesaplar. Eğer sonuç doğruysa süslü parantez içindeki ilk blok çalışır.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 6,
+          "astNodeType": "IfStmt",
+          "eventType": "❓ KARAR KONTROLÜ: notum > baraj"
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Boolean Mantığı",
+      "icon": "📚",
+      "content": "if ifadesinin parantez içi her zaman bir 'boolean' sonuç üretmelidir. 45 > 50 işlemi 'false' döneceği için program 'else' (değilse) kısmına atlayacaktır.",
+      "priority": 5,
+      "triggers": [
+        {
+          "astNodeType": "IfStmt"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "title": "Alternatif Yol (else)",
+      "icon": "↔️",
+      "content": "Koşul sağlanmadığı (false olduğu) için program 'else' bloğuna girdi. Bu blok, 'eğer şart doğru değilse şu işi yap' anlamına gelir.",
+      "priority": 10,
+      "triggers": [
+        {
+          "lineNumber": 9,
+          "astNodeType": "MethodCallExpr",
+          "eventType": "METOT ÇAĞRISI"
+        }
+      ]
+    },
+    {
+      "type": "warning",
+      "title": "Noktalı Virgül Uyarısı",
+      "icon": "⚠️",
+      "content": "Dikkat ederseniz 'if' ve 'else' satırlarının sonunda noktalı virgül (;) yoktur. Çünkü bu satırlar tek başına bir komut değil, bir kod bloğunun başlangıcıdır.",
+      "priority": 8,
+      "triggers": [
+        {
+          "astNodeType": "IfStmt"
+        }
+      ]
+    }
+  ]
+}
